@@ -12,24 +12,29 @@ nav {
     grid-row-start: 1;
     grid-row-end: 1;
     background: rgba(0, 0, 0 ,0.8);
+
 }
 
 .mainnav {
-    display: flex;
+    /*display: flex;
     justify-content: flex-start;
-    align-content: center;
+    align-content: center;*/
     list-style-type: none;
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mainnav li{
+  display: inline;
+  float: left;
 }
 
 .mainnav a {
+    display: block;
+    padding: 14px 16px;
     text-decoration: none;
     color:#f5f5f7;
-    padding-right: 20px;
-}
-
-.mainnav a:hover {
-    color: #0071e3;
+    /*padding-right: 20px;*/
 }
 
 header {
@@ -37,6 +42,7 @@ header {
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 2;
+    height: 100%;
     background-color: #0071e3;
     color: whitesmoke;
     text-align: center;
@@ -49,31 +55,101 @@ main {
     grid-column-end: 1;
     grid-row-start: 3;
     grid-row-end: 3;
-    background: linear-gradient(180deg, #aaaaaa, #FFFFFF);
+    background: linear-gradient(180deg, #bbbbbb, #FFFFFF);
+    border-top: 8px solid #FFFFFF;
+    border-bottom: 8px solid orange;
 }
 
 footer {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    background: rgba(0, 0, 0 ,0.8);
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  background: #aaaaaa;
 }
 
 .footernav {
-    display: flex;
-    justify-content: flex-end;
-    align-content: center;
-    list-style-type: none;
-    text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .footernav a {
-    text-decoration: none;
-    color:#f5f5f7;
-    padding-right: 20px;
+  text-decoration: none;
+  color:#f5f5f7;
+  padding-right: 20px;
 }
 
-.footernav a:hover {
-    color: #0071e3;
+a:hover {
+  color: #0071e3;
+}
+form {
+    /* Center the form on the page */
+    margin: 100px auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0 ,0.8);
+  }
+  
+  .formnav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .formnav li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input, 
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em "Roboto", sans-serif;
+  
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Match form field borders */
+    border: 1px solid rgba(0, 0, 0 ,0.8);;
+  }
+  
+  input:focus, 
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+  
+    /* Provide space to type some text */
+    height: 10em;
+  }
+  
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: 7em;
+  }
+
+button:hover {
+  color: #0071e3;
 }

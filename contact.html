@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+           function display() {
+            DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=500,height=200')
+            message = "<ul><li><b>Name: </b>" + document.getElementById("name").value;
+            message += "<li><b>Email: </b>" + document.getElementById("mail").value;
+            message += "<li><b>Message: </b>" + document.getElementById("message").value + "</ul>";
+            DispWin.document.write(message);
+            }
+            function resetForm() {
+                dcoument.getElementById("contactForm").reset();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <nav><!--Main Navigation-->
+            <ul class="mainnav">
+                <li>
+                    <a href="index.html" class="fa fa-home"></a>
+                </li>
+                <li>
+                    <a href="#">IT Professional</a>
+                </li>
+                <li>
+                    <a href="#">Property Developer</a>
+                </li>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+            </ul>
+        </nav><!-- end of Main navigation -->
+
+        <header>
+            <h1>I am Paul Hardy</h1>
+        </header>
+
+        <main><!-- Start Main Page -->
+            <form id="contactForm">
+                <ul class="formnav">
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="message" name="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button onclick="display()">Send</button>
+                    </li>
+                    <li class="button">
+                        <button onclick="resetForm()">Reset</button>
+                    </li>
+                </ul>
+            </form>
+        </main><!-- End of Main -->
+        
+        <footer><!-- Start of footer -->
+            <ul class="footernav">
+                    <li><a href="http://www.facebook.com" class="fa fa-facebook"></a></li>
+                    <li><a href="http://.twitter.com" class="fa fa-twitter"></a></li>
+                    <li><a href="http://.instagram.com" class="fa fa-instagram"></a></li>
+                    <li><a href="http://www.linkedin.com" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://github.com/iampaulhardy" class="fa fa-github"></a></li>
+            </ul>     
+        </footer><!-- End of footer -->
+        
+    </body>
+</html>
